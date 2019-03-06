@@ -2,6 +2,9 @@ from setuptools import setup
 from setuptools.command.build_py import build_py
 from chromedriver_binary.utils import get_chromedriver_filename, get_chromedriver_url, find_binary_in_path
 
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 import os
 import zipfile
 
